@@ -1,0 +1,71 @@
+* {
+    margin: 0%;
+}
+body {
+    font-family: helvetica;
+    background-color: rgb(200, 250, 200);
+    background-size: cover;
+    text-shadow: 1px 1px 0 #30382d;
+    color: rgb(237, 219, 156);
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 40px;
+}
+header .container {
+    display: flex; 
+    position: fixed;
+    width: 100%;
+    background-color: rgb(237, 219, 156);
+    color: rgb(34, 138, 34);
+    font-size: large;
+    top: 0
+}
+h1 {
+    font-size: 35px;
+}
+h2, h3 {
+    font-size: 22px;
+}
+h4 {
+    font-size: 18px;
+}
+hr {
+    width: 50%;
+    margin-left: 25%; 
+    block-size: 2px;
+    background-color: rgb(237, 219, 156);
+    border-radius: 5px;
+}
+.objetivo {
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-top: 8%;
+    background-color: rgb(34, 138, 34);
+    text-shadow: 2px 2px 0 #30382d;
+    padding: 40px 30px;
+    text-align: center;
+}
+footer {
+    background-color: rgb(238, 217, 148);
+    color: rgb(34, 138, 34);
+    padding: 5px 40px;
+}
+/* inicio responsivo */
+@media all and (max-width: 768px) {
+    .container p{
+        font-size:larger;
+     }
+    .objetivo{
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 40px 10px 10px 10px;
+    }
+    h1{
+        font-size: 30px;
+    }
+}

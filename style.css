@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 98vw;
+    background: linear-gradient(90deg, #246c27 1%, #eaf0b3 99%);
+    font-family: helvetica;
+    color: rgb(13, 57, 13);
+    text-shadow: 2px 2px 0 #779e5d;
+    background-repeat: no-repeat;
+    /* para não repetir a cor do fundo */
+}
+.content {
+    height: 440px;
+    width: 865px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   /* define o tamanho da caixa de rolamento horizontal das imagens */
+}
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(216, 237, 230);
+    font-size: 13px;
+    text-align: center;
+}
+.bar:hover {
+    background: #ffffff4c;
+}
+input {
+    display: none;
+}
+/* para esconder as bolinhas do input */
+.slides {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    /* width é a quantidade total de imagens, sendo 100% cada uma. */
+}
+.slide {
+    width: 10.00%;
+    transition: .6s;
+   /* width 100% é o content inteiro então dividir pela quantidade de imagem */
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+/* calcular margin-left dividindo a quantidade de imagem por 100 */
+#slide2:checked ~ .s2 {
+    margin-left: -10.00%;
+}
+#slide3:checked ~ .s3 {
+    margin-left: -20.00%;
+}
+#slide4:checked ~ .s4 {
+    margin-left: -30.00%;
+}
+#slide5:checked ~ .s5 {
+    margin-left: -40.00%;
+}
+#slide6:checked ~ .s6 {
+    margin-left: -50.00%;
+}
+#slide7:checked ~ .s7 {
+    margin-left: -60.00%;
+}
+#slide8:checked ~ .s8 {
+    margin-left: -70.00%;
+}
+#slide9:checked ~ .s9 {
+    margin-left: -80.00%;
+}
+#slide10:checked ~ .s10 {
+    margin-left: -90.00%;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    margin-right: 90px;
+    padding: 5px 10px;
+    font-size: 40px;
+}
+header .container {
+    display: flex; 
+    width: 98vw;
+    font-size: large;
+    top: 0;
+    background-color: rgb(237, 219, 156, 0.5);
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 90vw;
+    margin-left: 40vh;
+    padding: 0;
+}
+header a {
+    text-decoration: none;
+    color: rgb(13, 57, 13);
+    font-weight: bold;
+    margin: 0% 7%; 
+}
+header a:hover {
+    background-color: rgb(27, 98, 27, 0.3);
+    color: beige;
+    border-radius: 15px;
+}
+hr {
+    width: 50%;
+    margin-left: 20%; 
+    block-size: 5px;
+    background-color: rgb(216, 237, 230);
+    border-radius: 5px;
+}
+#titulo {
+    width: 98vw;
+    overflow: hidden;
+    padding: 30px 0 20px 0;
+    margin-top: 450px;
+}
+.coluna {
+    float: left;
+    position: relative;
+    width: 45%;
+    margin-left: 70px;
+}
+.dois {
+    width: 40%;
+}
+.tres {
+    width: 25%;
+}
+.coluna img {
+    width: 95%;
+    height: 95%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.centro {
+    text-align: center;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 25px;
+}
+/*rolagem grudenta snap  */
+    /* scroll ... vai determinar onde será travado - por exemplo no começo -stsrt*/
+    /* continuar a configuração na class interface */
+
+   /* position... para fixar uma tela enquanto a outra tela sobrepoem  */
+    section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+ /* para colocar o rolamento na vertical digita o eixo y e digita o obrigatorio */
+    /* aplicar tambem comando na section */
+    /* tem que ter height de 100vh  para determinar o rolamento */
+.interface section {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.interface img {
+    width: 100%;
+    height: 80%;
+}
+h3, p {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+    color: rgb(13, 57, 13);
+}
+h5 {
+    font-size: 20px;
+    color: rgb(13, 57, 13);
+}
+h6 {
+    font-size: 15px;
+    text-shadow: 1px 1px 0 #779e5d;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color:#eaf0b3;
+}
+/* inico botões */
+#obj123 .caixa1 {
+    display: grid;
+    padding: 30px 10px;
+    margin: 20px 20px;
+    margin-left: 8%;
+}
+#obj456 .caixa1 {
+    display: grid;
+    padding: 30px 10px;
+    margin: 20px 20px
+}
+#obj789 .caixa1 {
+    display: grid;
+    padding: 30px 10px;
+    margin: 20px 20px
+}
+.botao {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 6px 9px 15px rgb(38, 35, 35);
+    border: solid rgb(62, 100, 60);
+    background-color: rgb(9, 164, 50);
+    padding: 10px
+}
+.botao:hover {
+    background-color: rgb(27, 98, 27, 0.3);
+}
+.botao h4:hover {
+    color: #eaf0b3;
+}
+.botao h5:hover {
+    color: #eaf0b3;
+}
+.caixa {
+    margin-left: 30%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #75ff04;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(24, 24, 11);
+    background-image: linear-gradient(to top left, rgba(46, 46, 46, 0.2), rgba(18, 22, 19, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(36, 43, 37, 0.6);
+}
+  
+.caixa:hover {
+    background-color: rgb(62, 255, 4);
+    color: #000;
+}
+.caixa:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(42, 43, 42, 0.6);
+}
+footer {
+    background-color: rgb(237, 219, 156, 0.5);
+    padding: 3px 2px;
+    margin: 0;
+    width: 98vw;
+    overflow: hidden;
+}
+/* responsividade */
+@media all and (max-width: 768px) {
+    nav {
+        visibility: hidden;
+    }
+    header nav {    
+        display: none;
+        align-items: none;
+        flex-direction: none;
+        width: none;
+        margin-left: none;
+        padding: none;
+    }
+    body {
+        background: linear-gradient(90deg, #246c27 1%, #eaf0b3 99%);
+        height: 60%;
+    } 
+    #content, .content {
+        width: 50%;
+        height: 70%;
+    }
+    .content {
+        width: 95%;
+    }
+    .bar {
+        width:35px;
+        font-size: 10px;
+    }
+    #titulo, .coluna, .dois{
+        margin-left: 7%;
+        width: 80%;
+    }
+    .coluna {
+        margin-left: 0;
+        float: none;
+    }
+    .coluna img {
+        width: 75vw;
+        height: 55vh;
+    }
+    #obj123 .caixa1 {
+        margin-left: 40vw;
+    }
+    #obj456 .caixa1 {
+        margin-left: 40vw;
+    }
+    #obj789 .caixa1 {
+        margin-left: 40vw;
+    }
+    #content .content {
+        top: 70%;
+   }
+}
